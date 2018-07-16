@@ -21,10 +21,10 @@ parameter   [1:0]   IDLE = 4'b00,
                     OPER = 4'b01,
                     SDONE = 4'b10;
 
-reg reg_done = 0, reg_add_shift;
+reg reg_done = 0, reg_add_shift = 1'b0;
 reg [5:0] counter = 6'b100000; // Number of shifts 
 reg [31:0] multiplier; 
-reg [63:0] multiplicand, res;
+reg [63:0] multiplicand, res = 64'b0;
 reg [1:0] cur_state;
 
 
@@ -44,20 +44,31 @@ always @(posedge clk or posedge reset) begin
 						multiplicand <= 64'b0;
 						multiplier <= 31'b0;
 						cur_state <= IDLE;
+						counter <= 1'b0;
 					end
 				end
 				OPER: begin
-					if(multiplier[0] == 1'b1 && reg_add_shift == 1'b0) begin
-						res <= res + multiplicand;
-						reg_add_shift <= 1'b1; // 1 - shift
+					if(counter == 6'b000000) begin
+						cur_state <= SDONE;
 					end
 					else begin
-						multiplier <= multiplier >> 1'b1;
-						multiplicand <= multiplicand << 1'b1; 
-						reg_add_shift <= 1'b0;
-						counter <= counter - 1'b1;
+						if(multiplier[0] == 1'b1 && reg_add_shift == 1'b0) begin
+							res <= res + multiplicand;
+							reg_add_shift <= 1'b1; // 1 - shift
+						end
+						else begin
+							multiplier <= multiplier >> 1'b1;
+							multiplicand <= multiplicand << 1'b1; 
+							reg_add_shift <= 1'b0;
+							counter <= counter - 1'b1;
+						end	
+						cur_state <= OPER;
 					end
-
+				end
+				SDONE: begin
+					result <= res;
+					done <= 1'b1;
+					cur_state <= IDLE;
 				end
 			endcase	
 	end
