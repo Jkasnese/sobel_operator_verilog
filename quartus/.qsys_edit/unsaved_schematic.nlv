@@ -1,8 +1,24 @@
 # # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
 # 
-preplace inst unsaved.clk_0 -pg 1 -lvl 1 -y 30
+preplace inst unsaved.nios2_gen2_0 -pg 1 -lvl 2 -y 110
+preplace inst unsaved.nios2_gen2_0.cpu -pg 1
+preplace inst unsaved.onchip_memory2_0 -pg 1 -lvl 3 -y 90
+preplace inst unsaved.nios2_gen2_0.reset_bridge -pg 1
+preplace inst unsaved.nios2_gen2_0.clock_bridge -pg 1
+preplace inst unsaved.video_vga_controller_0 -pg 1 -lvl 4 -y 250
+preplace inst unsaved.onchip_memory2_1 -pg 1 -lvl 2 -y 260
+preplace inst unsaved.clk_0 -pg 1 -lvl 1 -y 90
 preplace inst unsaved -pg 1 -lvl 1 -y 40 -regy -20
 preplace netloc EXPORT<net_container>unsaved</net_container>(SLAVE)unsaved.clk,(SLAVE)clk_0.clk_in) 1 0 1 NJ
+preplace netloc FAN_OUT<net_container>unsaved</net_container>(SLAVE)nios2_gen2_0.clk,(MASTER)clk_0.clk,(SLAVE)onchip_memory2_0.clk1,(SLAVE)onchip_memory2_1.clk1) 1 1 2 410 30 870
+preplace netloc FAN_OUT<net_container>unsaved</net_container>(SLAVE)onchip_memory2_0.reset1,(MASTER)clk_0.clk_reset,(SLAVE)onchip_memory2_1.reset1,(SLAVE)nios2_gen2_0.reset) 1 1 2 430 50 850
 preplace netloc EXPORT<net_container>unsaved</net_container>(SLAVE)unsaved.reset,(SLAVE)clk_0.clk_in_reset) 1 0 1 NJ
-levelinfo -pg 1 0 50 270
-levelinfo -hier unsaved 60 90 260
+preplace netloc EXPORT<net_container>unsaved</net_container>(SLAVE)unsaved.video_vga_controller_0_reset,(SLAVE)video_vga_controller_0.reset) 1 0 4 NJ 390 NJ 390 NJ 320 NJ
+preplace netloc EXPORT<net_container>unsaved</net_container>(MASTER)unsaved.nios2_gen2_0_data_master,(MASTER)nios2_gen2_0.data_master) 1 2 3 NJ 180 NJ 180 NJ
+preplace netloc EXPORT<net_container>unsaved</net_container>(SLAVE)onchip_memory2_1.s1,(SLAVE)unsaved.onchip_memory2_1_s1) 1 0 2 NJ 310 NJ
+preplace netloc FAN_OUT<net_container>unsaved</net_container>(SLAVE)nios2_gen2_0.debug_mem_slave,(SLAVE)onchip_memory2_0.s1,(MASTER)nios2_gen2_0.instruction_master) 1 1 2 450 70 830
+preplace netloc EXPORT<net_container>unsaved</net_container>(SLAVE)unsaved.video_vga_controller_0_external_interface,(SLAVE)video_vga_controller_0.external_interface) 1 0 4 NJ 370 NJ 370 NJ 300 NJ
+preplace netloc EXPORT<net_container>unsaved</net_container>(SLAVE)video_vga_controller_0.clk,(SLAVE)unsaved.video_vga_controller_0_clk) 1 0 4 NJ 350 NJ 350 NJ 280 NJ
+preplace netloc EXPORT<net_container>unsaved</net_container>(SLAVE)unsaved.video_vga_controller_0_avalon_vga_sink,(SLAVE)video_vga_controller_0.avalon_vga_sink) 1 0 4 NJ 250 NJ 250 NJ 250 NJ
+levelinfo -pg 1 0 200 1600
+levelinfo -hier unsaved 210 240 570 920 1260 1420

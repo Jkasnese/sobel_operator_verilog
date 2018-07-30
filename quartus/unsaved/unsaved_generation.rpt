@@ -1,0 +1,92 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate /home/guiga/Desktop/Guiga/UEFEY/6_semestre_sd/MI_SD/P3/quartus/unsaved.qsys --block-symbol-file --output-directory=/home/guiga/Desktop/Guiga/UEFEY/6_semestre_sd/MI_SD/P3/quartus/unsaved --family="Cyclone IV E" --part=EP4CE30F23C7
+Progress: Loading quartus/unsaved.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 15.0]
+Progress: Parameterizing module clk_0
+Progress: Adding nios2_gen2_0 [altera_nios2_gen2 15.0]
+Progress: Parameterizing module nios2_gen2_0
+Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 15.0]
+Progress: Parameterizing module onchip_memory2_0
+Progress: Adding onchip_memory2_1 [altera_avalon_onchip_memory2 15.0]
+Progress: Parameterizing module onchip_memory2_1
+Progress: Adding video_vga_controller_0 [altera_up_avalon_video_vga_controller 15.0]
+Progress: Parameterizing module video_vga_controller_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: unsaved.nios2_gen2_0.data_master: Master needs a minimum address width of 3 bits (has 1)
+Warning: unsaved.video_vga_controller_0: Unable to verify clock frequency. Make sure the VGA clock has a frequency of 25.0 MHz.
+Info: unsaved.video_vga_controller_0: Video Output Stream: Format: 640 x 480 with Color: 10 (bits) x 3 (planes) converted to 8 (bits) per color plane
+Info: ip-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate /home/guiga/Desktop/Guiga/UEFEY/6_semestre_sd/MI_SD/P3/quartus/unsaved.qsys --synthesis=VERILOG --output-directory=/home/guiga/Desktop/Guiga/UEFEY/6_semestre_sd/MI_SD/P3/quartus/unsaved/synthesis --family="Cyclone IV E" --part=EP4CE30F23C7
+Progress: Loading quartus/unsaved.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 15.0]
+Progress: Parameterizing module clk_0
+Progress: Adding nios2_gen2_0 [altera_nios2_gen2 15.0]
+Progress: Parameterizing module nios2_gen2_0
+Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 15.0]
+Progress: Parameterizing module onchip_memory2_0
+Progress: Adding onchip_memory2_1 [altera_avalon_onchip_memory2 15.0]
+Progress: Parameterizing module onchip_memory2_1
+Progress: Adding video_vga_controller_0 [altera_up_avalon_video_vga_controller 15.0]
+Progress: Parameterizing module video_vga_controller_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: unsaved.nios2_gen2_0.data_master: Master needs a minimum address width of 3 bits (has 1)
+Warning: unsaved.video_vga_controller_0: Unable to verify clock frequency. Make sure the VGA clock has a frequency of 25.0 MHz.
+Info: unsaved.video_vga_controller_0: Video Output Stream: Format: 640 x 480 with Color: 10 (bits) x 3 (planes) converted to 8 (bits) per color plane
+Info: unsaved: Generating unsaved "unsaved" for QUARTUS_SYNTH
+Info: nios2_gen2_0: "unsaved" instantiated altera_nios2_gen2 "nios2_gen2_0"
+Info: onchip_memory2_0: Starting RTL generation for module 'unsaved_onchip_memory2_0'
+Info: onchip_memory2_0:   Generation command is [exec /home/guiga/altera/15.0/quartus/linux64/perl/bin/perl -I /home/guiga/altera/15.0/quartus/linux64/perl/lib -I /home/guiga/altera/15.0/quartus/sopc_builder/bin/europa -I /home/guiga/altera/15.0/quartus/sopc_builder/bin/perl_lib -I /home/guiga/altera/15.0/quartus/sopc_builder/bin -I /home/guiga/altera/15.0/quartus/../ip/altera/sopc_builder_ip/common -I /home/guiga/altera/15.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- /home/guiga/altera/15.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=unsaved_onchip_memory2_0 --dir=/tmp/alt7735_5211316566936412059.dir/0001_onchip_memory2_0_gen/ --quartus_dir=/home/guiga/altera/15.0/quartus --verilog --config=/tmp/alt7735_5211316566936412059.dir/0001_onchip_memory2_0_gen//unsaved_onchip_memory2_0_component_configuration.pl  --do_build_sim=0  ]
+Info: onchip_memory2_0: Done RTL generation for module 'unsaved_onchip_memory2_0'
+Info: onchip_memory2_0: "unsaved" instantiated altera_avalon_onchip_memory2 "onchip_memory2_0"
+Info: onchip_memory2_1: Starting RTL generation for module 'unsaved_onchip_memory2_1'
+Info: onchip_memory2_1:   Generation command is [exec /home/guiga/altera/15.0/quartus/linux64/perl/bin/perl -I /home/guiga/altera/15.0/quartus/linux64/perl/lib -I /home/guiga/altera/15.0/quartus/sopc_builder/bin/europa -I /home/guiga/altera/15.0/quartus/sopc_builder/bin/perl_lib -I /home/guiga/altera/15.0/quartus/sopc_builder/bin -I /home/guiga/altera/15.0/quartus/../ip/altera/sopc_builder_ip/common -I /home/guiga/altera/15.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- /home/guiga/altera/15.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=unsaved_onchip_memory2_1 --dir=/tmp/alt7735_5211316566936412059.dir/0002_onchip_memory2_1_gen/ --quartus_dir=/home/guiga/altera/15.0/quartus --verilog --config=/tmp/alt7735_5211316566936412059.dir/0002_onchip_memory2_1_gen//unsaved_onchip_memory2_1_component_configuration.pl  --do_build_sim=0  ]
+Info: onchip_memory2_1: Done RTL generation for module 'unsaved_onchip_memory2_1'
+Info: onchip_memory2_1: "unsaved" instantiated altera_avalon_onchip_memory2 "onchip_memory2_1"
+Info: video_vga_controller_0: Starting Generation of VGA Controller
+Info: video_vga_controller_0: "unsaved" instantiated altera_up_avalon_video_vga_controller "video_vga_controller_0"
+Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
+Info: mm_interconnect_0: "unsaved" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: irq_mapper: "unsaved" instantiated altera_irq_mapper "irq_mapper"
+Info: rst_controller: "unsaved" instantiated altera_reset_controller "rst_controller"
+Info: cpu: Starting RTL generation for module 'unsaved_nios2_gen2_0_cpu'
+Info: cpu:   Generation command is [exec /home/guiga/altera/15.0/quartus/linux64/eperlcmd -I /home/guiga/altera/15.0/quartus/linux64/perl/lib -I /home/guiga/altera/15.0/quartus/sopc_builder/bin/europa -I /home/guiga/altera/15.0/quartus/sopc_builder/bin/perl_lib -I /home/guiga/altera/15.0/quartus/sopc_builder/bin -I /home/guiga/altera/15.0/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I /home/guiga/altera/15.0/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I /home/guiga/altera/15.0/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I /home/guiga/altera/15.0/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- /home/guiga/altera/15.0/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=unsaved_nios2_gen2_0_cpu --dir=/tmp/alt7735_5211316566936412059.dir/0006_cpu_gen/ --quartus_bindir=/home/guiga/altera/15.0/quartus/linux64 --verilog --config=/tmp/alt7735_5211316566936412059.dir/0006_cpu_gen//unsaved_nios2_gen2_0_cpu_processor_configuration.pl  --do_build_sim=0  ]
+Info: cpu: # 2018.07.22 22:12:04 (*) Starting Nios II generation
+Info: cpu: # 2018.07.22 22:12:04 (*)   Checking for plaintext license.
+Info: cpu: # 2018.07.22 22:12:09 (*)   Plaintext license not found.
+Info: cpu: # 2018.07.22 22:12:09 (*)   No license required to generate encrypted Nios II/e.
+Info: cpu: # 2018.07.22 22:12:09 (*)   Elaborating CPU configuration settings
+Info: cpu: # 2018.07.22 22:12:09 (*)   Creating all objects for CPU
+Info: cpu: # 2018.07.22 22:12:11 (*)   Generating RTL from CPU objects
+Info: cpu: # 2018.07.22 22:12:11 (*)   Creating plain-text RTL
+Info: cpu: # 2018.07.22 22:12:12 (*) Done Nios II generation
+Info: cpu: Done RTL generation for module 'unsaved_nios2_gen2_0_cpu'
+Info: cpu: "nios2_gen2_0" instantiated altera_nios2_gen2_unit "cpu"
+Info: nios2_gen2_0_instruction_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "nios2_gen2_0_instruction_master_translator"
+Info: nios2_gen2_0_debug_mem_slave_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "nios2_gen2_0_debug_mem_slave_translator"
+Info: nios2_gen2_0_instruction_master_agent: "mm_interconnect_0" instantiated altera_merlin_master_agent "nios2_gen2_0_instruction_master_agent"
+Info: nios2_gen2_0_debug_mem_slave_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "nios2_gen2_0_debug_mem_slave_agent"
+Info: nios2_gen2_0_debug_mem_slave_agent_rsp_fifo: "mm_interconnect_0" instantiated altera_avalon_sc_fifo "nios2_gen2_0_debug_mem_slave_agent_rsp_fifo"
+Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+Info: router_001: "mm_interconnect_0" instantiated altera_merlin_router "router_001"
+Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file /home/guiga/Desktop/Guiga/UEFEY/6_semestre_sd/MI_SD/P3/quartus/unsaved/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
+Info: unsaved: Done "unsaved" with 22 modules, 37 files
+Info: ip-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

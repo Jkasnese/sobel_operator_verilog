@@ -25,7 +25,7 @@ reg reg_done = 0, reg_add_shift = 1'b0;
 reg [5:0] counter = 6'b100000; // Number of shifts 
 reg [31:0] multiplier; 
 reg [63:0] multiplicand, res = 64'b0;
-reg [1:0] cur_state;
+reg [1:0] cur_state = IDLE;
 
 
 always @(posedge clk or posedge reset) begin

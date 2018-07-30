@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <preferences>
  <debug showDebugMenu="0" />
- <systemtable filter="All Interfaces">
+ <systemtable filter="All Interfaces" showClockDomains="0" showResetDomains="0">
   <columns>
    <connections preferredWidth="159" />
    <irq preferredWidth="34" />
    <name preferredWidth="250" />
+   <export preferredWidth="299" />
   </columns>
  </systemtable>
  <library
-   expandedCategories="Library/Interface Protocols/PCI Express/QSYS Example Designs,Library/DSP,Library/Interface Protocols/PCI Express/Example Design Components,Library/Qsys Interconnect/Memory-Mapped,Project,Library/Qsys Interconnect,Library/Basic Functions/Bridges and Adaptors/Streaming,Library/Basic Functions/Simulation; Debug and Verification/Verification,Library,Library/Interface Protocols/Serial,Library/University Program/Audio &amp; Video/Video,Library/Basic Functions/Simulation; Debug and Verification,Library/Basic Functions/On Chip Memory,Library/Basic Functions/Simulation; Debug and Verification/Simulation,Library/Basic Functions/Bridges and Adaptors,Library/Basic Functions,Library/Interface Protocols/PCI Express,Library/Basic Functions/Bridges and Adaptors/Memory Mapped,Library/University Program/Audio &amp; Video,Library/Interface Protocols,Library/University Program,Library/DSP/Video and Image Processing" />
- <window width="1855" height="1084" x="65" y="-4" />
+   expandedCategories="Library/Processors and Peripherals/Co-Processors,Library/Processors and Peripherals/Embedded Processors,Library/Processors and Peripherals,Library/Basic Functions/Simulation; Debug and Verification/Simulation,Library/Basic Functions,Library/Processors and Peripherals/Co-Processors/Nios II Custom Instructions,Project,Library,Library/Basic Functions/Simulation; Debug and Verification" />
+ <window width="1855" height="1056" x="65" y="-4" />
 </preferences>

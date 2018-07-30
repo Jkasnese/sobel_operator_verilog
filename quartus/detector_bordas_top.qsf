@@ -52,3 +52,9 @@ set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name VERILOG_FILE source/vga_controller.v
+set_global_assignment -name VERILOG_FILE source/vga_pixel_counter.v
+set_global_assignment -name VERILOG_FILE unsaved/unsaved_inst.v
+set_global_assignment -name VHDL_FILE unsaved/unsaved_inst.vhd
+set_global_assignment -name QIP_FILE unsaved/synthesis/unsaved.qip
+set_global_assignment -name QIP_FILE source/vga_mem.qip
