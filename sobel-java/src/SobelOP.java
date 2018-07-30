@@ -17,12 +17,12 @@ public class SobelOP {
 	
 	private static int sobelX[][] = {{-1, -2, -1}, {0, 0, 0},{1, 2, 1}}; 
 	private static int sobelY[][] = {{-1, 0, 1}, {-2, 0, 2}, {-1, 0, 1}};
-	private static int width = 525, height = 350, threshold = 150; // Dimensões da imagem e limiar 
-	private static BufferedImage img = null, imgOut = new BufferedImage(width-1, height-1, BufferedImage.TYPE_INT_RGB);
+	private static int width =525, height = 350, threshold = 16; // Dimensões da imagem e limiar 
+	private static BufferedImage img = null, imgOut = new BufferedImage(width-2, height-2, BufferedImage.TYPE_INT_RGB);
 	private static int[][] sumX = new int[width][height];
 	private static int[][] sumY = new int[width][height], sumT = new int[width][height];
 	private static String fileName = "flower"; // Nome do arquivo da imagem a ser processada
-	private static File output = new File(fileName + "-sobel.jpg");
+	private static File output = new File(fileName + "-sobel" + threshold + ".jpg");
 	
 	
 	public static void main(String[] args) {
@@ -53,7 +53,30 @@ public class SobelOP {
 				
 				sumT[i][j] = sumX[i][j] + sumY[i][j]; 
 				
-				if(sumT[i][j] > threshold) {
+				
+				
+			if(sumT[i][j] > 255)
+				{	
+					int r = 255, g = 255, b = 255;
+					int rgb = (r<<16) + (g<<8) + b;
+					sumT[i][j] = rgb;
+				}
+				
+				if (sumT[i][j] < threshold) {
+					int r = 0, g = 0, b = 0;
+					int rgb = (r<<16) + (g<<8) + b;
+					sumT[i][j] = rgb;
+				}
+
+				else {
+					int r = sumT[i][j], g = sumT[i][j], b = sumT[i][j];
+					int rgb = (r<<16) + (g<<8) + b;
+					sumT[i][j] = rgb;
+				}
+				
+				// binarizando imagem: 
+				
+				/*if(sumT[i][j] > threshold) {
 					int r = 255, g = 255, b = 255;
 					int rgb = (r<<16) + (g<<8) + b;
 					sumT[i][j] = rgb;
@@ -63,18 +86,18 @@ public class SobelOP {
 					int rgb = (r<<16) + (g<<8) + b;
 					sumT[i][j] = rgb;
 				}
+				*/
 				
-			// Testes
-			/*	if(sumT[i][j] > 0) 		
-					System.out.print("1");
-				else
-					System.out.print(sumT[i][j]);
-			*/
+								
+				imgOut.setRGB(i-1, j-1, sumT[i][j]); // -1 porque inicialmente ele pega o pixel 1 da imagem original, na imagem resultante este será o pixel 0  
 				
-				imgOut.setRGB(i, j, sumT[i][j]);
+				// Printando valor do pixel
+				if (sumT[i][j] > threshold) {
+					System.out.print(new Color(imgOut.getRGB(i-1, j-1)).getBlue() + " ");					
+				}
+
 			}
-			
-			// System.out.println("\n" );
+			System.out.println("\n");
 		}
 		
 		
