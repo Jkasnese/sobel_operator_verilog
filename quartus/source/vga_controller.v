@@ -6,13 +6,11 @@
 */
 
 module vga_controller(
-	input sys_clock,
 	input vga_clock,
 	input reset,
 
-	input [31:0] write_reg, // 19:0 address, 23:20 data
+	input [23:0] write_reg, // 19:0 address, 23:20 data
 
-	output out_vga_clock,
 	output [3:0] pixel,
 	output reg h_sync_signal,
 	output reg v_sync_signal
@@ -43,6 +41,7 @@ parameter [1:0]
 reg [1:0] state, next;
 reg [9:0] row_counter;
 reg [8:0] column_counter;
+reg [7:0] sync_counter;
 
 reg sync_clken;
 
@@ -63,9 +62,24 @@ always @(posedge vga_clock or negedge sending_pixel) begin
 	end
 end
 
+// Column Counter
+always @(posedge sync_clken or negedge reset) begin
+	if (reset == 1'b0) begin
+		// reset
+		column_counter <= 9'd0;
+	end
+	else begin
+		if (v_sync_signal == 1'b1) begin
+			column_counter <= column_counter + 1'b1;
+		end else begin
+			column_counter <= 9'd0;
+		end
+	end
+end
+
 // Sync_Counter
-always @(posedge vga_clock negedge sync_clken) begin
-	if (sync_clken == 1'b0;) begin
+always @(posedge vga_clock or negedge sync_clken) begin
+	if (sync_clken == 1'b0) begin
 		// reset
 		sync_counter <= 8'd0;
 	end
@@ -89,7 +103,6 @@ end
 always @ (*) begin
 	h_sync_signal = 1'b1;
 	v_sync_signal = 1'b1;
-	sync_clken = 1'b0;
 	case (state)
 		PIXEL_VALID: begin
 			sending_pixel = 1'b1;
@@ -108,6 +121,7 @@ always @ (*) begin
 			if (sync_counter == h_back_porch - 1) begin
 				if (column_counter == column_size - 1) begin
 					next = V_SYNC_STATE;
+					sync_clken = 1'b0;
 				end
 				else begin
 					next = PIXEL_VALID;

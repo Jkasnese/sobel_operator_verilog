@@ -18,3 +18,5 @@ always @ (posedge clock or negedge reset) begin
 		end
 	end
 end
+
+endmodule

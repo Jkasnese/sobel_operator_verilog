@@ -1,0 +1,11 @@
+module sobel_top(
+	input clock,
+	input reset, 
+
+	output [3:0] out_pixel,
+	output hsync,
+	output vsync
+
+);
+
+
