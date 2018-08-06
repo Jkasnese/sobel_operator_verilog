@@ -2,20 +2,26 @@ module sobel_top(
 	input clock,
 	input reset, 
 	
-	input rx,
+	input rx, // pin H22
 
-	output [3:0] out_pixel,
+	output [3:0] r_pixel,
+	output [3:0] g_pixel,
+	output [3:0] b_pixel,
 	output hsync,
 	output vsync
 );
 
 // UART
-reg [7:0] uart_usr_options;
+wire [7:0] uart_usr_options;
 wire [7:0] uart_data_in;
 wire wire_new_data;
 
 // VGA
 wire [23:0] wire_vga_data;
+wire [3:0] out_pixel;
+assign r_pixel = out_pixel;
+assign g_pixel = out_pixel;
+assign b_pixel = out_pixel;
 
 uart rs232(
     .reset(reset),

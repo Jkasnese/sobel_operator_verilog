@@ -1,5 +1,5 @@
 EDA Netlist Writer report for detector_bordas_top
-Mon Jul 30 21:13:28 2018
+Thu Aug  2 15:12:54 2018
 Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
 
 
@@ -37,7 +37,7 @@ agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Mon Jul 30 21:13:28 2018 ;
+; EDA Netlist Writer Status ; Successful - Thu Aug  2 15:12:54 2018 ;
 ; Revision Name             ; detector_bordas_top                   ;
 ; Top-level Entity Name     ; sobel_top                             ;
 ; Family                    ; Cyclone IV E                          ;
@@ -89,7 +89,7 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit EDA Netlist Writer
     Info: Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
-    Info: Processing started: Mon Jul 30 21:13:23 2018
+    Info: Processing started: Thu Aug  2 15:12:50 2018
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off detector_bordas -c detector_bordas_top
 Info (204019): Generated file detector_bordas_top_7_1200mv_85c_slow.vo in folder "/home/guiga/Desktop/Guiga/UEFEY/6_semestre_sd/MI_SD/P3/quartus/simulation/modelsim/" for EDA simulation tool
 Info (204019): Generated file detector_bordas_top_7_1200mv_0c_slow.vo in folder "/home/guiga/Desktop/Guiga/UEFEY/6_semestre_sd/MI_SD/P3/quartus/simulation/modelsim/" for EDA simulation tool
@@ -101,7 +101,7 @@ Info (204019): Generated file detector_bordas_top_min_1200mv_0c_v_fast.sdo in fo
 Info (204019): Generated file detector_bordas_top_v.sdo in folder "/home/guiga/Desktop/Guiga/UEFEY/6_semestre_sd/MI_SD/P3/quartus/simulation/modelsim/" for EDA simulation tool
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 1139 megabytes
-    Info: Processing ended: Mon Jul 30 21:13:28 2018
+    Info: Processing ended: Thu Aug  2 15:12:55 2018
     Info: Elapsed time: 00:00:05
     Info: Total CPU time (on all processors): 00:00:05
 

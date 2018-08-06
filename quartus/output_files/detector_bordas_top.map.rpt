@@ -1,5 +1,5 @@
 Analysis & Synthesis report for detector_bordas_top
-Mon Jul 30 21:11:03 2018
+Thu Aug  2 15:10:36 2018
 Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
 
 
@@ -191,10 +191,9 @@ Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
 183. Port Connectivity Checks: "nios0:u0"
 184. Port Connectivity Checks: "uart:rs232|uart_receiver:rx"
 185. Post-Synthesis Netlist Statistics for Top Partition
-186. Post-Synthesis Netlist Statistics for Partition sld_hub:auto_hub
-187. Elapsed Time Per Partition
-188. Analysis & Synthesis Messages
-189. Analysis & Synthesis Suppressed Messages
+186. Elapsed Time Per Partition
+187. Analysis & Synthesis Messages
+188. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -221,7 +220,7 @@ agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Jul 30 21:11:03 2018      ;
+; Analysis & Synthesis Status        ; Successful - Thu Aug  2 15:10:35 2018      ;
 ; Quartus II 64-Bit Version          ; 15.0.0 Build 145 04/22/2015 SJ Web Edition ;
 ; Revision Name                      ; detector_bordas_top                        ;
 ; Top-level Entity Name              ; sobel_top                                  ;
@@ -230,7 +229,7 @@ agreement for further details.
 ;     Total combinational functions  ; 1,983                                      ;
 ;     Dedicated logic registers      ; 1,115                                      ;
 ; Total registers                    ; 1115                                       ;
-; Total pins                         ; 9                                          ;
+; Total pins                         ; 17                                         ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 449,536                                    ;
 ; Embedded Multiplier 9-bit elements ; 0                                          ;
@@ -463,7 +462,7 @@ agreement for further details.
 ;     -- Dedicated logic registers            ; 1115        ;
 ;     -- I/O registers                        ; 0           ;
 ;                                             ;             ;
-; I/O pins                                    ; 9           ;
+; I/O pins                                    ; 17          ;
 ; Total memory bits                           ; 449536      ;
 ;                                             ;             ;
 ; Embedded Multiplier 9-bit elements          ; 0           ;
@@ -473,8 +472,8 @@ agreement for further details.
 ;                                             ;             ;
 ; Maximum fan-out node                        ; clock~input ;
 ; Maximum fan-out                             ; 1008        ;
-; Total fan-out                               ; 12972       ;
-; Average fan-out                             ; 3.92        ;
+; Total fan-out                               ; 12982       ;
+; Average fan-out                             ; 3.91        ;
 +---------------------------------------------+-------------+
 
 
@@ -483,7 +482,7 @@ agreement for further details.
 +-------------------------------------------------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                  ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                                                                         ; Library Name ;
 +-------------------------------------------------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |sobel_top                                                                                                  ; 1983 (2)          ; 1115 (0)     ; 449536      ; 0            ; 0       ; 0         ; 9    ; 0            ; |sobel_top                                                                                                                                                                                                                                                                                                                                                                                  ; work         ;
+; |sobel_top                                                                                                  ; 1983 (2)          ; 1115 (0)     ; 449536      ; 0            ; 0       ; 0         ; 17   ; 0            ; |sobel_top                                                                                                                                                                                                                                                                                                                                                                                  ; work         ;
 ;    |nios0:u0|                                                                                               ; 1621 (0)          ; 935 (0)      ; 142336      ; 0            ; 0       ; 0         ; 0    ; 0            ; |sobel_top|nios0:u0                                                                                                                                                                                                                                                                                                                                                                         ; nios0        ;
 ;       |altera_reset_controller:rst_controller|                                                              ; 6 (5)             ; 16 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sobel_top|nios0:u0|altera_reset_controller:rst_controller                                                                                                                                                                                                                                                                                                                                  ; nios0        ;
 ;          |altera_reset_synchronizer:alt_rst_req_sync_uq1|                                                   ; 1 (1)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sobel_top|nios0:u0|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_req_sync_uq1                                                                                                                                                                                                                                                                                   ; nios0        ;
@@ -1373,14 +1372,6 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |sobel_top|nios0:u0|nios0_nios2_gen2_0:nios2_gen2_0|nios0_nios2_gen2_0_cpu:cpu|D_dst_regnum[0]                                                                                                                                                                                                                                          ;
 ; 6:1                ; 2 bits    ; 8 LEs         ; 2 LEs                ; 6 LEs                  ; No         ; |sobel_top|nios0:u0|nios0_mm_interconnect_0:mm_interconnect_0|nios0_mm_interconnect_0_router:router|src_channel[2]                                                                                                                                                                                                                      ;
 ; 6:1                ; 2 bits    ; 8 LEs         ; 2 LEs                ; 6 LEs                  ; No         ; |sobel_top|nios0:u0|nios0_mm_interconnect_0:mm_interconnect_0|nios0_mm_interconnect_0_router:router_001|src_channel[2]                                                                                                                                                                                                                  ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |sobel_top|sld_hub:auto_hub|alt_sld_fab:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|hub_minor_ver_reg[3]                                                               ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |sobel_top|sld_hub:auto_hub|alt_sld_fab:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|mixer_addr_reg_internal[4]                                                         ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 2 LEs                ; 6 LEs                  ; Yes        ; |sobel_top|sld_hub:auto_hub|alt_sld_fab:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|irf_reg[2][0]                                                                      ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |sobel_top|sld_hub:auto_hub|alt_sld_fab:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_rom_sr:hub_info_reg|word_counter[4]                                            ;
-; 6:1                ; 3 bits    ; 12 LEs        ; 3 LEs                ; 9 LEs                  ; Yes        ; |sobel_top|sld_hub:auto_hub|alt_sld_fab:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|irsr_reg[2]                                                                        ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 2 LEs                ; 6 LEs                  ; Yes        ; |sobel_top|sld_hub:auto_hub|alt_sld_fab:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|shadow_irf_reg[2][0]                                                               ;
-; 34:1               ; 4 bits    ; 88 LEs        ; 60 LEs               ; 28 LEs                 ; Yes        ; |sobel_top|sld_hub:auto_hub|alt_sld_fab:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|design_hash_reg[0]                                                                 ;
-; 28:1               ; 4 bits    ; 72 LEs        ; 48 LEs               ; 24 LEs                 ; Yes        ; |sobel_top|sld_hub:auto_hub|alt_sld_fab:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_rom_sr:hub_info_reg|WORD_SR[1]                                                 ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -4976,7 +4967,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 63                          ;
+; boundary_port         ; 71                          ;
 ; cycloneiii_ff         ; 1032                        ;
 ;     CLR               ; 327                         ;
 ;     CLR SCLR          ; 10                          ;
@@ -5008,44 +4999,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 
 
-+------------------------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Partition sld_hub:auto_hub ;
-+-----------------------+------------------------------------------+
-; Type                  ; Count                                    ;
-+-----------------------+------------------------------------------+
-; boundary_port         ; 140                                      ;
-; cycloneiii_ff         ; 83                                       ;
-;     CLR               ; 5                                        ;
-;     ENA               ; 16                                       ;
-;     ENA CLR           ; 22                                       ;
-;     ENA CLR SLD       ; 4                                        ;
-;     ENA SCLR          ; 5                                        ;
-;     ENA SLD           ; 9                                        ;
-;     SCLR              ; 7                                        ;
-;     plain             ; 15                                       ;
-; cycloneiii_lcell_comb ; 144                                      ;
-;     arith             ; 8                                        ;
-;         2 data inputs ; 8                                        ;
-;     normal            ; 136                                      ;
-;         0 data inputs ; 1                                        ;
-;         1 data inputs ; 7                                        ;
-;         2 data inputs ; 27                                       ;
-;         3 data inputs ; 33                                       ;
-;         4 data inputs ; 68                                       ;
-;                       ;                                          ;
-; Max LUT depth         ; 4.00                                     ;
-; Average LUT depth     ; 1.93                                     ;
-+-----------------------+------------------------------------------+
-
-
-+---------------------------------+
-; Elapsed Time Per Partition      ;
-+------------------+--------------+
-; Partition Name   ; Elapsed Time ;
-+------------------+--------------+
-; Top              ; 00:00:08     ;
-; sld_hub:auto_hub ; 00:00:01     ;
-+------------------+--------------+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:08     ;
++----------------+--------------+
 
 
 +-------------------------------+
@@ -5054,7 +5014,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
-    Info: Processing started: Mon Jul 30 21:10:11 2018
+    Info: Processing started: Thu Aug  2 15:09:40 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off detector_bordas -c detector_bordas_top
 Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
 Info (12021): Found 1 design units, including 1 entities, in source file source/clk_decoder.v
@@ -5164,10 +5124,10 @@ Info (12021): Found 1 design units, including 1 entities, in source file source/
     Info (12023): Found entity 1: vga_mem
 Info (12021): Found 1 design units, including 1 entities, in source file vga_pll.v
     Info (12023): Found entity 1: vga_pll
-Warning (10236): Verilog HDL Implicit Net warning at sobel_top.v(27): created implicit net for "wire_data_read"
-Warning (10236): Verilog HDL Implicit Net warning at sobel_top.v(47): created implicit net for "vga_36clk"
-Warning (10236): Verilog HDL Implicit Net warning at sobel_top.v(48): created implicit net for "vga_27clk"
-Warning (10236): Verilog HDL Implicit Net warning at sobel_top.v(49): created implicit net for "wire_locked"
+Warning (10236): Verilog HDL Implicit Net warning at sobel_top.v(33): created implicit net for "wire_data_read"
+Warning (10236): Verilog HDL Implicit Net warning at sobel_top.v(53): created implicit net for "vga_36clk"
+Warning (10236): Verilog HDL Implicit Net warning at sobel_top.v(54): created implicit net for "vga_27clk"
+Warning (10236): Verilog HDL Implicit Net warning at sobel_top.v(55): created implicit net for "wire_locked"
 Warning (10236): Verilog HDL Implicit Net warning at vga_controller.v(160): created implicit net for "out_pixel"
 Info (12127): Elaborating entity "sobel_top" for the top level hierarchy
 Info (12128): Elaborating entity "uart" for hierarchy "uart:rs232"
@@ -5463,7 +5423,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/mux_
     Info (12023): Found entity 1: mux_tob
 Info (12128): Elaborating entity "mux_tob" for hierarchy "vga_controller:vga|vga_mem:vga_mem_inst|altsyncram:altsyncram_component|altsyncram_8rj1:auto_generated|mux_tob:mux3"
 Info (11170): Start IP generation for the debug fabric within sld_hub.
-Info (11172): 2018.07.30.21:10:42 Progress: Loading sld6a296029/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2018.08.02.15:10:14 Progress: Loading sld6a296029/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -5610,29 +5570,32 @@ Warning (13012): Latch vga_controller:vga|next.V_SYNC_STATE_213 has unsafe behav
 Info (13000): Registers with preset signals will power-up high
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "out_pixel[1]" is stuck at GND
-    Warning (13410): Pin "out_pixel[2]" is stuck at GND
-    Warning (13410): Pin "out_pixel[3]" is stuck at GND
+    Warning (13410): Pin "r_pixel[1]" is stuck at GND
+    Warning (13410): Pin "r_pixel[2]" is stuck at GND
+    Warning (13410): Pin "r_pixel[3]" is stuck at GND
+    Warning (13410): Pin "g_pixel[1]" is stuck at GND
+    Warning (13410): Pin "g_pixel[2]" is stuck at GND
+    Warning (13410): Pin "g_pixel[3]" is stuck at GND
+    Warning (13410): Pin "b_pixel[1]" is stuck at GND
+    Warning (13410): Pin "b_pixel[2]" is stuck at GND
+    Warning (13410): Pin "b_pixel[3]" is stuck at GND
 Info (286031): Timing-Driven Synthesis is running on partition "Top"
 Info (17049): 12 registers lost all their fanouts during netlist optimizations.
-Info (13000): Registers with preset signals will power-up high
-Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
-Info (286031): Timing-Driven Synthesis is running on partition "sld_hub:auto_hub"
 Info (144001): Generated suppressed messages file /home/guiga/Desktop/Guiga/UEFEY/6_semestre_sd/MI_SD/P3/quartus/output_files/detector_bordas_top.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
 Warning (15899): PLL "vga_pll:vpll|altpll:altpll_component|vga_pll_altpll:auto_generated|pll1" has parameters clk1_multiply_by and clk1_divide_by specified but port CLK[1] is not connected
-Info (21057): Implemented 2478 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 2486 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 6 input pins
-    Info (21059): Implemented 7 output pins
+    Info (21059): Implemented 15 output pins
     Info (21061): Implemented 2281 logic cells
     Info (21064): Implemented 182 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 133 warnings
-    Info: Peak virtual memory: 1157 megabytes
-    Info: Processing ended: Mon Jul 30 21:11:04 2018
-    Info: Elapsed time: 00:00:53
-    Info: Total CPU time (on all processors): 00:01:34
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 139 warnings
+    Info: Peak virtual memory: 1149 megabytes
+    Info: Processing ended: Thu Aug  2 15:10:36 2018
+    Info: Elapsed time: 00:00:56
+    Info: Total CPU time (on all processors): 00:01:37
 
 
 +------------------------------------------+

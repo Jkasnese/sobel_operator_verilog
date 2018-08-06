@@ -28,9 +28,9 @@ module custom_convolution (
  [31:24] datab (2,2)
 
         kernel X    kernel Y
-a b c   1 0 -1      1  2  1
+a b c   1 0 -1     -1 -2 -1
 d e f   2 0 -2      0  0  0
-g h i   1 0 -1     -1 -2 -1
+g h i   1 0 -1      1  2  1
 
 */
 

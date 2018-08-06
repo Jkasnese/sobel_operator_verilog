@@ -1,5 +1,5 @@
 Assembler report for detector_bordas_top
-Mon Jul 30 21:12:21 2018
+Thu Aug  2 15:12:28 2018
 Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
 
 
@@ -39,7 +39,7 @@ agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Mon Jul 30 21:12:21 2018 ;
+; Assembler Status      ; Successful - Thu Aug  2 15:12:28 2018 ;
 ; Revision Name         ; detector_bordas_top                   ;
 ; Top-level Entity Name ; sobel_top                             ;
 ; Family                ; Cyclone IV E                          ;
@@ -79,8 +79,8 @@ agreement for further details.
 ; Option         ; Setting                          ;
 +----------------+----------------------------------+
 ; Device         ; EP4CE30F23C7                     ;
-; JTAG usercode  ; 0x00374A32                       ;
-; Checksum       ; 0x00374A32                       ;
+; JTAG usercode  ; 0x00374B99                       ;
+; Checksum       ; 0x00374B99                       ;
 +----------------+----------------------------------+
 
 
@@ -90,14 +90,14 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
-    Info: Processing started: Mon Jul 30 21:12:18 2018
+    Info: Processing started: Thu Aug  2 15:12:24 2018
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off detector_bordas -c detector_bordas_top
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 869 megabytes
-    Info: Processing ended: Mon Jul 30 21:12:21 2018
-    Info: Elapsed time: 00:00:03
+    Info: Peak virtual memory: 867 megabytes
+    Info: Processing ended: Thu Aug  2 15:12:28 2018
+    Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:03
 
 

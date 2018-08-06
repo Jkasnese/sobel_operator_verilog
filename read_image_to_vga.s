@@ -96,7 +96,7 @@ call __read_byte
 
 # Get 4 MSBs pixel data
 andi r10, r10, 0xF0
-slli r10, 0x10
+slli r10, r10, 0x10
 
 # Add address
 or r10, r10, r5
