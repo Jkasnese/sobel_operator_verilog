@@ -4,11 +4,11 @@ with serial.Serial('/dev/ttyUSB0', 115200, timeout=60) as s:
     print(s.name)
     print(s)
 
-    # Writes the size of the message (in bytes) to be transmited. Most significative byte first, then less significative.
-    s.write(b'\x00\xb03\x84')
+    # Writes the size of the image (in bytes) to be transmited. Most significative byte first, then less significative.
+    s.write(b'\x00\xb03\x84') # 900
 
     # Writes the image length
-    s.write(b'\x28') # 64
+    s.write(b'\x1E') # 30
 
     img = (b'\x00')
     

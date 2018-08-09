@@ -1,0 +1,84 @@
+MIF/HEX Update report for vga_controller
+Wed Aug  8 10:46:37 2018
+Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. MIF/HEX Update Summary
+  3. MIF/HEX Update Processed Files
+  4. MIF/HEX Update Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2015 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus II License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++---------------------------------------------------------------+
+; MIF/HEX Update Summary                                        ;
++-----------------------+---------------------------------------+
+; MIF/HEX Update Status ; Successful - Wed Aug  8 10:46:37 2018 ;
+; Revision Name         ; vga_controller                        ;
+; Top-level Entity Name ; top_level                             ;
+; Family                ; Cyclone IV E                          ;
+; Device                ; EP4CE30F23C7                          ;
++-----------------------+---------------------------------------+
+
+
++---------------------------------------------------------------------------------+
+; MIF/HEX Update Processed Files                                                  ;
++---------------------------------------------------------------------------------+
+; File Name                                                                       ;
++---------------------------------------------------------------------------------+
+; /home/guiga/Desktop/PENDRIVE/VGA_TESTE_IMG_CERTO 3.0/nios0_onchip_memory2_0.hex ;
++---------------------------------------------------------------------------------+
+
+
++-------------------------+
+; MIF/HEX Update Messages ;
++-------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit MIF/HEX Update
+    Info: Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
+    Info: Processing started: Wed Aug  8 10:46:35 2018
+Info: Command: quartus_cdb vga_controller -c vga_controller --update_mif
+Warning (113015): Width of data items in "nios0_onchip_memory2_0.hex" is greater than the memory width. Wrapping data items to subsequent addresses. Found 256 warnings, reporting 10
+    Warning (113009): Data at line (2) of memory initialization file "nios0_onchip_memory2_0.hex" is too wide to fit in one memory word. Wrapping data to subsequent addresses.
+    Warning (113009): Data at line (3) of memory initialization file "nios0_onchip_memory2_0.hex" is too wide to fit in one memory word. Wrapping data to subsequent addresses.
+    Warning (113009): Data at line (4) of memory initialization file "nios0_onchip_memory2_0.hex" is too wide to fit in one memory word. Wrapping data to subsequent addresses.
+    Warning (113009): Data at line (5) of memory initialization file "nios0_onchip_memory2_0.hex" is too wide to fit in one memory word. Wrapping data to subsequent addresses.
+    Warning (113009): Data at line (6) of memory initialization file "nios0_onchip_memory2_0.hex" is too wide to fit in one memory word. Wrapping data to subsequent addresses.
+    Warning (113009): Data at line (7) of memory initialization file "nios0_onchip_memory2_0.hex" is too wide to fit in one memory word. Wrapping data to subsequent addresses.
+    Warning (113009): Data at line (8) of memory initialization file "nios0_onchip_memory2_0.hex" is too wide to fit in one memory word. Wrapping data to subsequent addresses.
+    Warning (113009): Data at line (9) of memory initialization file "nios0_onchip_memory2_0.hex" is too wide to fit in one memory word. Wrapping data to subsequent addresses.
+    Warning (113009): Data at line (10) of memory initialization file "nios0_onchip_memory2_0.hex" is too wide to fit in one memory word. Wrapping data to subsequent addresses.
+    Warning (113009): Data at line (11) of memory initialization file "nios0_onchip_memory2_0.hex" is too wide to fit in one memory word. Wrapping data to subsequent addresses.
+Critical Warning (127005): Memory depth (4096) in the design file differs from memory depth (2048) in the Memory Initialization File "/home/guiga/Desktop/PENDRIVE/VGA_TESTE_IMG_CERTO 3.0/nios0_onchip_memory2_0.hex" -- setting initial value for remaining addresses to 0
+Info (39024): Processed the following Memory Initialization File(s)
+    Info (39025): Processed Memory Initialization File /home/guiga/Desktop/PENDRIVE/VGA_TESTE_IMG_CERTO 3.0/nios0_onchip_memory2_0.hex
+Info: Quartus II 64-Bit MIF/HEX Update was successful. 0 errors, 12 warnings
+    Info: Peak virtual memory: 1227 megabytes
+    Info: Processing ended: Wed Aug  8 10:46:38 2018
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:03
+
+

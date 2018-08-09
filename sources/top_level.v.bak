@@ -1,0 +1,17 @@
+module top_level(
+
+	input clk, 
+	input reset, 
+
+	output [3:0] r,
+	output [3:0] g, 
+	output [3:0] b, 
+	output v_sync, 
+	output h_sync
+
+);
+	
+
+	
+
+endmodule

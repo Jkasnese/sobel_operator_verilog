@@ -1,0 +1,46 @@
+module sync_generator(
+
+	input clk,
+	input reset,
+	
+	output h_sync,
+	output v_sync,
+	output active_video;
+
+);
+
+localparam H_TOTAL = 800;
+localparam V_TOTAL = 524;
+localparam ACTIVE_VIDEO_H = 640;
+localparam ACTIVE_VIDEO_V = 480;
+localparam START_H = 16;
+localparam END_H = 112; // 16 (front porch) + 96 (sync pulse)
+localparam START_V = 491; // 480 (active video v) + 11 (front porch v)
+localparam END_V = 493; // START_V + 2 (sync pulse)
+
+
+reg [9:0] x_counter = 10'd0, y_counter = 10'd0;
+
+
+always @ (posedge clk) begin
+	
+	if(x_counter == H_TOTAL) begin
+		x_counter <= 10'd0;
+		y_counter <= y_counter + 1'b1;
+
+		if(y_counter == V_TOTAL) begin
+			y_counter <= 10'd0;
+		end
+	end
+	else begin
+		x_counter <= x_counter + 1'b1;
+	end
+		
+end
+
+assign active_video = ((x_counter > END_H + 48) && (x_counter < H_TOTAL) && (y_counter < V_TOTAL));
+assign h_sync = ~((x_counter > START_H) && (x_counter < END_H)); // ~((x_counter > H_TOTAL + START_H) && (x_counter < H_TOTAL + END_H));
+assign v_sync = ~((y_counter > START_V) && (y_counter < END_V)); // ~((y_counter > V_TOTAL + START_V) && (y_counter < Y_TOTAL + END_V));
+
+
+endmodule

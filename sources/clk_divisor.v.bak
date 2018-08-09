@@ -1,0 +1,13 @@
+module clk_divisor(
+
+	input clk_50,
+
+	output clk_25;
+
+);
+
+always @(posedge clk_50) begin
+	clk_25 <= ~clk_25;
+end
+
+endmodule

@@ -1,0 +1,19 @@
+module pixel_gen(
+	
+	input clk,
+	output [3:0] pixel;
+);
+
+
+reg [3:0] pxl_color = 4'd0;
+assign pixel = pxl_color;
+reg [9:0] line_counter = 10'd0; 
+
+always @(posedge clk) begin
+	
+	if(line_counter == 10'd640) begin
+		pxl_color <= pxl_color + 1;
+		line_counter <= 10'd0;
+	end
+
+end
